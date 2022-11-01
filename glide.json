@@ -1,0 +1,15 @@
+{
+  "name": "Glide Datatables",
+  "description": "",
+  "author": "Darren Murphy <darren@victoriajd.com>",
+  "params": [
+    {
+      "name": "table",
+      "displayName": "HTML Table",
+      "type": "string"
+    }
+  ],
+  "result": {
+    "type": "string"
+  }
+}
