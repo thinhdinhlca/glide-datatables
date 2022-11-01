@@ -13,17 +13,13 @@ window.function = function (table, tableID) {
     <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
     <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.12.1/js/dataTables.jqueryui.min.js"></script>
   </head>
-  <body>`;
-
-  html += table.value;
-  html += `
-    </body>
-    </html>
-    <script type="text/javascript" class="init">
-    $('#`;
-  html += tableID.value;
-  html += `
-  ').DataTable();
+  <body>
+  ${table.value}
+  </body>
+  </html>
+  <script type="text/javascript" class="init">
+  $(document).ready(function () {
+    $('#${tableID.value}').DataTable();
   });
   </script>
   `;
