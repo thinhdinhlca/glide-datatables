@@ -33,5 +33,7 @@ window.function = function (table) {
 </script>
 `;
 
-  return html;
+var enc = encodeURIComponent(html);
+var uri = `data:text/html;charset=utf-8,${enc}`
+return uri; 
 }
