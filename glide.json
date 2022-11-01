@@ -7,6 +7,11 @@
       "name": "table",
       "displayName": "HTML Table",
       "type": "string"
+    },
+    {
+      "name": "tableID",
+      "displayName": "Table Element ID",
+      "type": "string"
     }
   ],
   "result": {

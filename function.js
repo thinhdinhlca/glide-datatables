@@ -1,5 +1,6 @@
-window.function = function (table) {
+window.function = function (table, tableID) {
   if (table.value === undefined) return undefined;
+  if (tableID.value === undefined) return undefined;
   
   var html = `
   <!DOCTYPE html>
@@ -12,28 +13,22 @@ window.function = function (table) {
     <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
     <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.12.1/js/dataTables.jqueryui.min.js"></script>
   </head>
-  <body>`
+  <body>`;
 
   html += table.value;
   html += `
     </body>
     </html>
     <script type="text/javascript" class="init">
-
-    $(document).ready(function () {
-      const params = new Proxy(new URLSearchParams(window.location.search), {
-      get: (searchParams, prop) => searchParams.get(prop),
-    });
-
-    var rows = params.rows;
-    document.getElementById("tbody").innerHTML = rows;
-
-    $('#books').DataTable();
+    $('#`;
+  html += tableID.value;
+  html += `
+  ').DataTable();
   });
-</script>
-`;
+  </script>
+  `;
 
-var enc = encodeURIComponent(html);
-var uri = `data:text/html;charset=utf-8,${enc}`
-return uri; 
+  var enc = encodeURIComponent(html);
+  var uri = `data:text/html;charset=utf-8,${enc}`
+  return uri; 
 }
