@@ -21,6 +21,11 @@ window.function = function (table, tableID) {
   const COLVIS_OPTIONS = `
     <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.colVis.min.js"></script>
   `;
+
+  const COLREORDER_OPTIONS = `
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/colreorder/1.5.6/css/colReorder.dataTables.min.csss">
+    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/colreorder/1.5.6/js/dataTables.colReorder.min.js"></script>
+  `;
   
   var html = `
   <!DOCTYPE html>
