@@ -44,7 +44,7 @@ window.function = function (table, tableID) {
     $(document).ready(function () {
       $('#${tableID.value}').DataTable({
         colReorder: true,
-        dom: 'Bfrtip',
+        dom: 'BlRfrtip',
         buttons: [
             'copy', 'csv', 'excel', 'pdf', 'print', 'colvis'
         ]
