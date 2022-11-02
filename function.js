@@ -1,7 +1,7 @@
-window.function = function (table, tableID) {
+window.function = function (table, tableID, allow_export) {
   if (table.value === undefined) return undefined;
   if (tableID.value === undefined) return undefined;
-  var export = export.value ? export.value : false;
+  var export = allow_export.value ? allow_export.value : false;
   var export_js = '';
 
   const BASE_OPTIONS = `

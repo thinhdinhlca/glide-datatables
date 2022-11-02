@@ -14,7 +14,7 @@
       "type": "string"
     },
     {
-      "name": "export",
+      "name": "allow_export",
       "displayName": "Allow Export Optons (Default false)",
       "type": "boolean"
     }
