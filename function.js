@@ -17,6 +17,10 @@ window.function = function (table, tableID) {
     <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.html5.min.js"></script>
     <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.print.min.js"></script>
   `;
+
+  const COLVIS_OPTIONS = `
+    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.colVis.min.js"></script>
+  `;
   
   var html = `
   <!DOCTYPE html>
@@ -25,6 +29,7 @@ window.function = function (table, tableID) {
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     ${BASE_OPTIONS}
     ${EXPORT_OPTIONS}
+    ${COLVIS_OPTIONS}
   </head>
   <body>
    ${table.value}
@@ -33,9 +38,10 @@ window.function = function (table, tableID) {
   <script type="text/javascript" class="init">
     $(document).ready(function () {
       $('#${tableID.value}').DataTable({
+        colReorder: true,
         dom: 'Bfrtip',
         buttons: [
-            'copy', 'csv', 'excel', 'pdf', 'print'
+            'copy', 'csv', 'excel', 'pdf', 'print', 'colvis'
         ]
       });
     });
