@@ -12,6 +12,11 @@
       "name": "tableID",
       "displayName": "Table Element ID",
       "type": "string"
+    },
+    {
+      "name": "export",
+      "displayName": "Allow Export Optons (Default false)",
+      "type": "boolean"
     }
   ],
   "result": {
