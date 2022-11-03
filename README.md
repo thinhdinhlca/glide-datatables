@@ -7,7 +7,7 @@
 ### Configuration Options
 
 #### `table` (string, required)
-    Your HTML table should be a string of data representing the table. It _must_ be structured as follows:
+* Your HTML table should be a string of data representing the table. It _must_ be structured as follows:
 ```
 <table id="mytable">
   <thead>
@@ -20,15 +20,15 @@
 </table>
 ```
 #### `tableID` (string, required)
-    - the element ID assigned to your table
+* the element ID assigned to your table
 #### `buttons` (string, optional)
-    - a single quoted comma separated list of buttons to include.
-    - The following are supported: `'copy','excel','pdf','print','csv','colvis'`
-    default: `null`
+* a single quoted comma separated list of buttons to include.
+* The following are supported: `'copy','excel','pdf','print','csv','colvis'`
+    * default: `null`
 #### `colReorder` (boolean, optional)
-    - whether or not to allow column re-ordering
-    default: `false`
+* whether or not to allow column re-ordering
+    * default: `false`
 #### `domOptions` (string, optional)
-    - additional options to control the table layout. Refer to [Datatables Documentation](https://datatables.net/reference/option/dom)
-    default: `BRfrtlip`
-    NOTE: use these options with caution. Getting them wrong will break your table
+* additional options to control the table layout. Refer to [Datatables Documentation](https://datatables.net/reference/option/dom)
+    * default: `BRfrtlip`
+* _NOTE: use these options with caution. Getting them wrong will break your table_
