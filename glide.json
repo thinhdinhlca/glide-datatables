@@ -12,6 +12,11 @@
       "name": "tableID",
       "displayName": "Table Element ID",
       "type": "string"
+    },
+    {
+      "name": "buttons",
+      "displayName": "Buttons",
+      "type": "string"
     }
   ],
   "result": {
