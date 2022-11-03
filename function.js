@@ -36,6 +36,7 @@ window.function = function (table, tableID, buttons) {
     ${BASE_OPTIONS}
     ${EXPORT_OPTIONS}
     ${COLVIS_OPTIONS}
+    ${COLREORDER_OPTIONS}
   </head>
   <body>
    ${table.value}
