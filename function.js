@@ -1,7 +1,7 @@
 window.function = function (table, tableID, buttons) {
   if (table.value === undefined) return undefined;
   if (tableID.value === undefined) return undefined;
-  var buttonSpec = buttons.value ? buttons.value : '';
+  var buttonSpec = buttons.value ? buttons.value : 'pdf';
 
   const BASE_OPTIONS = `
     <script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
