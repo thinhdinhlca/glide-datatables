@@ -22,6 +22,11 @@
       "name": "colReorder",
       "displayName": "Column Reordering",
       "type": "boolean"
+    },
+    {
+      "name": "domOptions",
+      "displayName": "DOM Options",
+      "type": "string"
     }
   ],
   "result": {

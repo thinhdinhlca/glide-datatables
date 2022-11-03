@@ -1,8 +1,9 @@
-window.function = function (table, tableID, buttons, colReorder) {
+window.function = function (table, tableID, buttons, colReorder, domOptions) {
   if (table.value === undefined) return undefined;
   if (tableID.value === undefined) return undefined;
   var buttonSpec = buttons.value ? buttons.value : `''`;
-  var col_ordering = colReorder.value ? colReorder : false;
+  var col_ordering = colReorder.value ? colReorder.value : false;
+  var dom = domOptions.value ? domOptions.value : 'BRfrtlip';
 
   const BASE_OPTIONS = `
     <script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
@@ -48,7 +49,7 @@ window.function = function (table, tableID, buttons, colReorder) {
     $(document).ready(function () {
       $('#${tableID.value}').DataTable({
         colReorder: true,
-        dom: 'BRfrtlip',
+        dom: '${dom}',
         buttons: [
             ${buttonSpec}
         ]
