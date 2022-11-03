@@ -17,6 +17,11 @@
       "name": "buttons",
       "displayName": "Buttons",
       "type": "string"
+    },
+    {
+      "name": "colReorder",
+      "displayName": "Column Reordering",
+      "type": "boolean"
     }
   ],
   "result": {

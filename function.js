@@ -1,7 +1,8 @@
-window.function = function (table, tableID, buttons) {
+window.function = function (table, tableID, buttons, colReorder) {
   if (table.value === undefined) return undefined;
   if (tableID.value === undefined) return undefined;
   var buttonSpec = buttons.value ? buttons.value : `''`;
+  var col_ordering = colReorder.value ? colReorder : false;
 
   const BASE_OPTIONS = `
     <script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
@@ -23,10 +24,11 @@ window.function = function (table, tableID, buttons) {
     <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.colVis.min.js"></script>
   `;
 
-  const COLREORDER_OPTIONS = `
+  const COLREORDER_OPTIONS = col_ordering === true ? 
+    `
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/colreorder/1.5.6/css/colReorder.dataTables.min.csss">
     <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/colreorder/1.5.6/js/dataTables.colReorder.min.js"></script>
-  `;
+    ` : '';
   
   var html = `
   <!DOCTYPE html>
