@@ -50,7 +50,8 @@ window.function = function (table, tableID, buttons, colReorder, domOptions) {
       $('#${tableID.value}').DataTable({
         colReorder: true,
         responsive: true,
-        pageLength: 25,
+        pageLength: 100,
+        lengthMenu: [ [5, 10, 25, 50, -1], [5, 10, 25, 50, "All"]],
         dom: '${dom}',
         buttons: [
             ${buttonSpec}
