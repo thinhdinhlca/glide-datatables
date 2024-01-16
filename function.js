@@ -41,6 +41,20 @@ window.function = function (table, tableID, buttons, colReorder, domOptions) {
     ${COLVIS_OPTIONS}
     ${COLREORDER_OPTIONS}
   </head>
+  <style>
+body {
+  font: 90%/1.45em "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background-color: #fff;
+}
+
+table {
+  font-family: "Inter";
+}
+</style>
+
   <body>
    ${table.value}
   </body>
