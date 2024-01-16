@@ -51,7 +51,7 @@ body {
 }
 
 table {
-  font-family: "Inter";
+  font-family: "Inter", sans-serif;
 }
 </style>
 
