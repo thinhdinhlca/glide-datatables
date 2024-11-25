@@ -27,6 +27,11 @@
       "name": "domOptions",
       "displayName": "DOM Options",
       "type": "string"
+    },
+    {
+      "name": "defaultPageLength",
+      "displayName": "Default page length",
+      "type": "number"
     }
   ],
   "result": {
