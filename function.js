@@ -26,6 +26,11 @@ window.function = function (table, tableID, buttons, colReorder, domOptions, def
     <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/buttons/2.3.2/js/buttons.colVis.min.js"></script>
   `;
 
+  const FIXED_HEADER_OPTIONS = `
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/fixedheader/3.3.1/css/fixedHeader.dataTables.min.css">
+    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/fixedheader/3.3.1/js/dataTables.fixedHeader.min.js"></script>
+  `;
+
   const COLREORDER_OPTIONS = col_ordering === true ? 
     `
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/colreorder/1.6.1/css/colReorder.dataTables.min.css">
@@ -40,6 +45,7 @@ window.function = function (table, tableID, buttons, colReorder, domOptions, def
     ${BASE_OPTIONS}
     ${EXPORT_OPTIONS}
     ${COLVIS_OPTIONS}
+    ${FIXED_HEADER_OPTIONS}
     ${COLREORDER_OPTIONS}
   </head>
   <style>
@@ -62,7 +68,7 @@ table {
   </html>
   <script type="text/javascript" class="init">
     $(document).ready(function () {
-      $('#${tableID.value}').DataTable({
+      var table = $('#${tableID.value}').DataTable({
         colReorder: ${col_ordering},
         responsive: true,
         pageLength: ${pageLength},
@@ -72,6 +78,9 @@ table {
             ${buttonSpec}
         ]
       });
+
+      // Initialize Fixed Header
+      new $.fn.dataTable.FixedHeader(table);
     });
   </script>
   `;
