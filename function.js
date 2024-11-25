@@ -1,9 +1,10 @@
-window.function = function (table, tableID, buttons, colReorder, domOptions) {
+window.function = function (table, tableID, buttons, colReorder, domOptions, defaultPageLength) {
   if (table.value === undefined) return undefined;
   if (tableID.value === undefined) return undefined;
   var buttonSpec = buttons.value ? buttons.value : `''`;
   var col_ordering = colReorder.value ? colReorder.value : false;
   var dom = domOptions.value ? domOptions.value : 'BRfrtlip';
+  var pageLength = defaultPageLength.value ? parseInt(defaultPageLength.value, 10) : 10; // Default to 10 if not provided.
 
   const BASE_OPTIONS = `
     <script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.6.3.js"></script>
@@ -27,7 +28,7 @@ window.function = function (table, tableID, buttons, colReorder, domOptions) {
 
   const COLREORDER_OPTIONS = col_ordering === true ? 
     `
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/colreorder/1.6.1/css/colReorder.dataTables.min.csss">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/colreorder/1.6.1/css/colReorder.dataTables.min.css">
     <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/colreorder/1.6.1/js/dataTables.colReorder.min.js"></script>
     ` : '';
   
@@ -62,9 +63,9 @@ table {
   <script type="text/javascript" class="init">
     $(document).ready(function () {
       $('#${tableID.value}').DataTable({
-        colReorder: true,
+        colReorder: ${col_ordering},
         responsive: true,
-        pageLength: 100,
+        pageLength: ${pageLength},
         lengthMenu: [ [5, 10, 25, 50, -1], [5, 10, 25, 50, "All"]],
         dom: '${dom}',
         buttons: [
