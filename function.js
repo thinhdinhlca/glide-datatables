@@ -40,7 +40,7 @@ window.function = function (table, tableID, buttons, colReorder, domOptions, def
 
   var html = `
   <!DOCTYPE html>
-  <html class="${darkModeClass}">
+  <html data-bs-theme="${darkModeClass}">
   <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     ${BASE_OPTIONS}
