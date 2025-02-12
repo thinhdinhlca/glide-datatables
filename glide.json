@@ -32,6 +32,11 @@
       "name": "defaultPageLength",
       "displayName": "Default page length",
       "type": "number"
+    },
+    {
+      "name": "enabledDarkMode",
+      "displayName": "Enable Dark Mode?",
+      "type": "boolean"
     }
   ],
   "result": {
