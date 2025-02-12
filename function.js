@@ -61,6 +61,13 @@ body {
 table {
   font-family: "Inter", sans-serif;
 }
+
+html.dark {
+  font: 90%/1.5em system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif !important;
+  position: relative;
+  background-color: #212529;
+  color: #dae0e7;
+}
 </style>
 
   <body>
